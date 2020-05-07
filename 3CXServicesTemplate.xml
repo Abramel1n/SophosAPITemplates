@@ -3,9 +3,10 @@
 
 <!-- API Authentication -->
 <Login>
-	<Username>apiuser01</Username>
-	<Password>Fqej27a2JgQe8kNmdFx6B@</Password>
+<Username>apiuser01</Username>
+<Password>Fqej27a2JgQe8kNmdFx6B@</Password>
 </Login>
+
 
 <Set operation="add">
 
@@ -25,6 +26,4 @@
     <Subnet>255.255.255.0</Subnet>
   </IPHost>
 </Set>
-
 </Request>
-
