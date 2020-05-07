@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Request>
 
 <!-- API Authentication -->
@@ -5,111 +6,24 @@
 	<Username>apiuser01</Username>
 	<Password>Fqej27a2JgQe8kNmdFx6B@</Password>
 </Login>
-	
-		
+
 <Set operation="add">
-		
-<!-- Adding new 3CX services -->	
-<Services transactionid="">
-    <Name>3CXHTTPS</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5001</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXSIP</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5060</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5060</DestinationPort>
-        <Protocol>UDP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXSecureSIP</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5061</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXTun</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5090</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5090</DestinationPort>
-        <Protocol>UDP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXRPS</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>5000</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXSSH</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>4422</DestinationPort>
-        <Protocol>TCP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <Services transactionid="">
-    <Name>3CXRTP</Name>
-    <Type>TCPorUDP</Type>
-    <ServiceDetails>
-      <ServiceDetail>
-        <SourcePort>1:65535</SourcePort>
-        <DestinationPort>9000:10999</DestinationPort>
-        <Protocol>UDP</Protocol>
-      </ServiceDetail>
-    </ServiceDetails>
-  </Services>
-  <ServiceGroup transactionid="">
-    <Name>3CXServices</Name>
-    <Description/>
-    <ServiceList>
-      <Service>3CXHTTPS</Service>
-      <Service>3CXSIP</Service>
-      <Service>3CXSecureSIP</Service>
-      <Service>3CXTun</Service>
-      <Service>3CXRPS</Service>
-      <Service>3CXRTP</Service>
-    </ServiceList>
-  </ServiceGroup>
-	
+
+<!-- Adding two new network definitions -->
+  <IPHost transactionid="">
+    <Name>EastUsLAN</Name>
+    <IPFamily>IPv4</IPFamily>
+    <HostType>Network</HostType>
+    <IPAddress>10.20.1.0</IPAddress>
+    <Subnet>255.255.255.0</Subnet>
+  </IPHost>
+  <IPHost transactionid="">
+    <Name>WestEurLAN</Name>
+    <IPFamily>IPv4</IPFamily>
+    <HostType>Network</HostType>
+    <IPAddress>10.10.1.0</IPAddress>
+    <Subnet>255.255.255.0</Subnet>
+  </IPHost>
 </Set>
 
 </Request>
