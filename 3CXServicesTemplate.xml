@@ -100,7 +100,6 @@
   </Services>
   <ServiceGroup transactionid="">
     <Name>3CXServices</Name>
-    <Description/>
     <ServiceList>
       <Service>3CXHTTPS</Service>
       <Service>3CXSIP</Service>
